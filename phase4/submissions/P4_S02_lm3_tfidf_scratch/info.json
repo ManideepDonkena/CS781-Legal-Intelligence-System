@@ -1,0 +1,18 @@
+{
+ "runs": [
+  "ft_tail2048_e2:e2",
+  "ft_tail2048_e2_s2:e2",
+  "ft_tail2048_e3_s1:e3",
+  "tfidf_scratch"
+ ],
+ "avg": "prob",
+ "threshold": 0.3036870646476744,
+ "dev": {
+  "macro_f1": 0.8228659141627077,
+  "precision": 0.8234614308480226,
+  "recall": 0.8229376257545271,
+  "accuracy": 0.8229376257545271
+ },
+ "dev_honest_macro_f1": 0.8148174127143217,
+ "test_share_pred_1": 0.5036255767963085
+}

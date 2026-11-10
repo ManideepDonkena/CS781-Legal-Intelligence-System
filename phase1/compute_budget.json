@@ -1,0 +1,70 @@
+{
+  "source": "User-provided target envelope; actual feasibility still requires a T4 pilot",
+  "platform": "Kaggle free GPU",
+  "gpus": 2,
+  "gpu_type": "NVIDIA T4",
+  "vram_per_gpu_GB": 16,
+  "pooled_vram_assumed": false,
+  "cpu_ram_GB_approximate": 29,
+  "session_limit_hours": 12,
+  "launcher_max_invocation_hours": 11,
+  "default_invocation_minutes": 60,
+  "default_save_margin_seconds": 120,
+  "weekly_gpu_hour_target": 30,
+  "storage_budget_GB_approximate": 20,
+  "parameter_min": 50000000,
+  "parameter_max": 300000000,
+  "core_parameter_target": 60000000,
+  "scratch_training_only": true,
+  "official_training_data_only": true,
+  "core_families": [
+    "transformer",
+    "gru",
+    "hybrid",
+    "shared"
+  ],
+  "optional_attention_controls": [
+    "local",
+    "linear"
+  ],
+  "default_screen": {
+    "context": 512,
+    "train_token_ceiling": 2097152,
+    "validation_token_ceiling": 32768,
+    "effective_input_tokens_per_update": 16384,
+    "expected_updates_if_cache_fills": 128,
+    "pilot_updates": 3,
+    "batch_size_per_gpu": 1,
+    "gradient_accumulation": 32,
+    "precision_on_T4": "FP16 with loss scaling; selected by auto",
+    "allocator_ceiling_GiB": 14,
+    "allocator_fraction_ceiling": 0.9,
+    "source_record_prefix_limit": 2000,
+    "source_text_byte_soft_limit": 128000000,
+    "validation_continuation_pairs": 3
+  },
+  "kaggle_larger_run": {
+    "train_token_ceiling": 10485760,
+    "validation_token_ceiling": 262144,
+    "context": 2048,
+    "note": "This is a larger-run proposal, not sufficient-training evidence. The starter's 200M tokens are not treated as a mandatory default.",
+    "validation_continuation_pairs": 20
+  },
+  "gates": [
+    "CPU preparation before enabling GPUs when practical",
+    "Three-update pilot on one 16GB GPU",
+    "Enforce realized parameter range",
+    "Forecast remaining compute from measured pilot; add 25% overhead and a 2x uncertainty factor",
+    "Do not launch a whole screen if conservative allocation estimate exceeds remaining local budget allowance",
+    "Treat two allocated GPUs as two times notebook wall time for conservative quota planning",
+    "Only shortlist experiments after their predeclared measurement/decision gate"
+  ],
+  "accounting_limitations": [
+    "Local ledger is not Kaggle billing telemetry",
+    "User must supply actual opening remaining quota and preserve ledger across sessions",
+    "Idle notebook time outside the launcher and unrelated notebooks are not automatically observable",
+    "Soft wall-budget checks may overrun during one update, evaluation, preparation or checkpoint write"
+  ],
+  "default_working_storage_ceiling_GiB": 18,
+  "minimum_free_storage_headroom_GiB": 4
+}

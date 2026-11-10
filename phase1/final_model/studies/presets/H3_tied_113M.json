@@ -1,0 +1,54 @@
+{
+ "id": "H3_tied_113M",
+ "title": "H3_tied_113M",
+ "question": "H3",
+ "hypothesis": "",
+ "protocol": {
+  "study": "H3",
+  "cache": "bpe50k_mixA_600M"
+ },
+ "settings": {
+  "sources": [
+   "acts",
+   "high_courts",
+   "supreme_court",
+   "tribunals"
+  ],
+  "seed": 42,
+  "validation_fraction": 0.05,
+  "max_document_bytes": 16000000,
+  "max_invalid_fraction": 0.05,
+  "tokenizer": "bpe",
+  "vocab_size": 50000,
+  "tokenizer_sample_bytes": 60000000,
+  "train_tokens": 600000000,
+  "val_tokens": 4000000,
+  "validation_pairs": 20,
+  "max_documents_per_source": 0,
+  "max_source_text_bytes": 0,
+  "family": "yarn_gqa",
+  "d_model": 768,
+  "layers": 12,
+  "heads": 12,
+  "context": 2048,
+  "dropout": 0.0,
+  "gradient_checkpointing": false,
+  "batch_size": 16,
+  "grad_accum": 2,
+  "learning_rate": 0.0028,
+  "weight_decay": 0.1,
+  "warmup_steps": 183,
+  "eval_every": 762,
+  "max_steps": 9155,
+  "shared_groups": 2,
+  "local_window": 256,
+  "model_extra": {
+   "n_kv_heads": 3,
+   "tie_embeddings": true
+  },
+  "decay_split": true,
+  "compile": true,
+  "min_lr_ratio": 0.1,
+  "require_competition_size": true
+ }
+}

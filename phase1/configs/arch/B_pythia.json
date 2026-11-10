@@ -1,0 +1,16 @@
+{
+  "model_type": "gpt_neox",
+  "hidden_size": 1024,
+  "intermediate_size": 4096,
+  "num_hidden_layers": 18,
+  "num_attention_heads": 16,
+  "rotary_pct": 0.25,
+  "use_parallel_residual": true,
+  "hidden_act": "gelu",
+  "layer_norm_eps": 1e-05,
+  "vocab_size": 64000,
+  "tie_word_embeddings": true,
+  "max_position_embeddings": 2048,
+  "use_cache": false,
+  "initializer_range": 0.02
+}

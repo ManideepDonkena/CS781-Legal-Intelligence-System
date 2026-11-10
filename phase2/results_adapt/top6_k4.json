@@ -1,0 +1,108 @@
+{
+ "args": {
+  "data": "/home/mani/cs781/Capstone/Phase2_LNER/data/Phase_2_LNER",
+  "repo": "/home/mani/cs781_phase1/Legal_LLM",
+  "backbone": "/workspace/models/cs781_phase1_runs/ROPEFIX_295M",
+  "method": "top",
+  "kfold": "5:4",
+  "out_dir": "../runs/adapt/top6_k4",
+  "epochs": 12,
+  "batch": 8,
+  "width": 1024,
+  "stride": 768,
+  "eval_stride": 512,
+  "eval_batch": 16,
+  "lr": 2e-05,
+  "head_lr": 0.001,
+  "weight_decay": 0.01,
+  "dropout": 0.1,
+  "lstm_hidden": 384,
+  "rank": 16,
+  "alpha": 32,
+  "top_k": 6,
+  "teacher": "",
+  "kd_alpha": 0.5,
+  "kd_temp": 2.0,
+  "save": false,
+  "seed": 1,
+  "max_steps": 0,
+  "crf": true,
+  "repeat": false,
+  "attention": "causal",
+  "head": "bilstm"
+ },
+ "backbone_params": 287557504,
+ "trainable_params": 74364042,
+ "train_docs": 56,
+ "eval_docs": 14,
+ "epochs": [
+  {
+   "epoch": 1,
+   "loss": 0.6721220190708453,
+   "minutes": 0.59046524365743
+  },
+  {
+   "epoch": 2,
+   "loss": 0.0749250533990562,
+   "minutes": 1.1527958432833354
+  },
+  {
+   "epoch": 3,
+   "loss": 0.039798020385205746,
+   "minutes": 1.7165793458620706
+  },
+  {
+   "epoch": 4,
+   "loss": 0.025275611877441408,
+   "minutes": 2.2871055126190187
+  },
+  {
+   "epoch": 5,
+   "loss": 0.01906861225143075,
+   "minutes": 2.8528040806452433
+  },
+  {
+   "epoch": 6,
+   "loss": 0.014179568272083998,
+   "minutes": 3.4151469747225445
+  },
+  {
+   "epoch": 7,
+   "loss": 0.010708373326521654,
+   "minutes": 3.9860806902249655
+  },
+  {
+   "epoch": 8,
+   "loss": 0.009148141834884882,
+   "minutes": 4.551043168703715
+  },
+  {
+   "epoch": 9,
+   "loss": 0.007564961444586515,
+   "minutes": 5.113361553351084
+  },
+  {
+   "epoch": 10,
+   "loss": 0.00715300807586083,
+   "minutes": 5.694301227728526
+  },
+  {
+   "epoch": 11,
+   "loss": 0.006739395398360032,
+   "minutes": 6.268445392449697
+  },
+  {
+   "epoch": 12,
+   "loss": 0.006806964520365,
+   "minutes": 6.834919905662536
+  }
+ ],
+ "train_minutes": 6.834921586513519,
+ "peak_train_gb": 6.502099990844727,
+ "infer_seconds": 2.246276378631592,
+ "eval_tokens": 96110,
+ "macro_f1": {
+  "raw": 0.5828,
+  "prop0.34": 0.5662
+ }
+}

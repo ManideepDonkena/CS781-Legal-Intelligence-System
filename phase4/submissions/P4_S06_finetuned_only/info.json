@@ -1,0 +1,19 @@
+{
+ "runs": [
+  "ft_tapt_fix_e2:e2",
+  "ft_tapt_fix_e2_s1:e2",
+  "ft_tapt_fix_e2_s2:e2",
+  "ft_tapt_fix_lr4e5_e2:e2",
+  "ft_fix_e2:e2"
+ ],
+ "avg": "prob",
+ "threshold": 0.2180159376561641,
+ "dev": {
+  "macro_f1": 0.8450547403880414,
+  "precision": 0.845210178648814,
+  "recall": 0.8450704225352113,
+  "accuracy": 0.8450704225352113
+ },
+ "dev_honest_macro_f1": 0.8366561686694449,
+ "test_share_pred_1": 0.5379037574159525
+}

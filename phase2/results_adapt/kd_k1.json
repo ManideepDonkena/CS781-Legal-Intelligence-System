@@ -1,0 +1,108 @@
+{
+ "args": {
+  "data": "/home/mani/cs781/Capstone/Phase2_LNER/data/Phase_2_LNER",
+  "repo": "/home/mani/cs781_phase1/Legal_LLM",
+  "backbone": "/workspace/models/cs781_phase1_runs/ROPEFIX_112M_snap2",
+  "method": "full",
+  "kfold": "5:1",
+  "out_dir": "../runs/adapt/kd_k1",
+  "epochs": 12,
+  "batch": 8,
+  "width": 1024,
+  "stride": 768,
+  "eval_stride": 512,
+  "eval_batch": 16,
+  "lr": 2e-05,
+  "head_lr": 0.001,
+  "weight_decay": 0.01,
+  "dropout": 0.1,
+  "lstm_hidden": 384,
+  "rank": 16,
+  "alpha": 32,
+  "top_k": 6,
+  "teacher": "../runs/adapt/full_k1",
+  "kd_alpha": 0.5,
+  "kd_temp": 2.0,
+  "save": false,
+  "seed": 1,
+  "max_steps": 0,
+  "crf": true,
+  "repeat": false,
+  "attention": "causal",
+  "head": "bilstm"
+ },
+ "backbone_params": 98914560,
+ "trainable_params": 106024586,
+ "train_docs": 56,
+ "eval_docs": 14,
+ "epochs": [
+  {
+   "epoch": 1,
+   "loss": 0.9273599250958516,
+   "minutes": 0.6215999643007915
+  },
+  {
+   "epoch": 2,
+   "loss": 0.08834632724756375,
+   "minutes": 1.2196714838345846
+  },
+  {
+   "epoch": 3,
+   "loss": 0.04380374029278755,
+   "minutes": 1.830739688873291
+  },
+  {
+   "epoch": 4,
+   "loss": 0.031318416990912874,
+   "minutes": 2.438896882534027
+  },
+  {
+   "epoch": 5,
+   "loss": 0.026150238700211048,
+   "minutes": 3.039191174507141
+  },
+  {
+   "epoch": 6,
+   "loss": 0.022811338625615463,
+   "minutes": 3.6397935907046
+  },
+  {
+   "epoch": 7,
+   "loss": 0.020658321038354188,
+   "minutes": 4.2395674109458925
+  },
+  {
+   "epoch": 8,
+   "loss": 0.01918536191806197,
+   "minutes": 4.839490854740143
+  },
+  {
+   "epoch": 9,
+   "loss": 0.018368792476562354,
+   "minutes": 5.447233474254608
+  },
+  {
+   "epoch": 10,
+   "loss": 0.017724636010825634,
+   "minutes": 6.056736465295156
+  },
+  {
+   "epoch": 11,
+   "loss": 0.017553276282090406,
+   "minutes": 6.664567379156749
+  },
+  {
+   "epoch": 12,
+   "loss": 0.01743186293886258,
+   "minutes": 7.274111227194468
+  }
+ ],
+ "train_minutes": 7.274112514654795,
+ "peak_train_gb": 9.15674638748169,
+ "infer_seconds": 1.4769635200500488,
+ "eval_tokens": 95021,
+ "macro_f1": {
+  "raw": 0.5887,
+  "prop0.34": 0.5961
+ }
+}

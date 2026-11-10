@@ -1,0 +1,130 @@
+{
+ "phase3": {
+  "metric": "sentence macro-F1 (13 roles), 5 held-out folds",
+  "lorma_per_fold": [
+   46.90573647032145,
+   52.932702169607445,
+   44.67699937809097,
+   48.24393166988615,
+   45.52966442789091
+  ],
+  "full_per_fold": [
+   47.0,
+   54.99,
+   44.5,
+   48.62,
+   44.77
+  ],
+  "lorma_mean": 47.65780682315938,
+  "full_mean": 47.976,
+  "lorma_train_min": 2.0212882423400877,
+  "full_train_min_approx": 3.793333333333333,
+  "lorma_peak_gb": 6.31258487701416
+ },
+ "phase4": {
+  "metric": "dev macro-F1 (@0.5 / @median)",
+  "trainable_lm_params": 6688768,
+  "lorma": {
+   "e0_1581": "dev @0.5: macro-F1 75.59 | P 78.23 R 76.06 | acc 76.06 || dev @median 0.286: macro-F1 77.26 | P 77.26 R 77.26 | acc 77.26",
+   "e1": "dev @0.5: macro-F1 78.29 | P 80.13 R 78.57 | acc 78.57 || dev @median 0.315: macro-F1 79.88 | P 79.88 R 79.88 | acc 79.88"
+  },
+  "lorma_peak_gb": 27.013615608215332,
+  "lorma_minutes": 25.009189025561014,
+  "full": {
+   "e0_1581": "dev @0.5: macro-F1 75.41 | P 76.18 R 75.55 | acc 75.55 || dev @median 0.354: macro-F1 75.86 | P 75.86 R 75.86 | acc 75.86",
+   "e1": "dev @0.5: macro-F1 70.45 | P 78.65 R 72.13 | acc 72.13 || dev @median 0.083: macro-F1 80.68 | P 80.68 R 80.68 | acc 80.68",
+   "e1_1581": "dev @0.5: macro-F1 82.13 | P 83.55 R 82.29 | acc 82.29 || dev @median 0.185: macro-F1 83.20 | P 83.20 R 83.20 | acc 83.20",
+   "e2": "dev @0.5: macro-F1 82.26 | P 83.42 R 82.39 | acc 82.39 || dev @median 0.234: macro-F1 82.70 | P 82.70 R 82.70 | acc 82.70"
+  }
+ },
+ "phase5": {
+  "metric": "dev macro-F1 (@0.5 | thresholds tuned on the other half)",
+  "trainable_lm_params": 26755072,
+  "lorma": {
+   "e1": "dev @0.5: macro-F1 29.30 | micro-F1 46.88 | subset acc 8.94 || dev macro-F1, thresholds tuned on other half: 38.88"
+  },
+  "lorma_peak_gb": 27.568870544433594,
+  "lorma_minutes": 21.324683678150176,
+  "full": {
+   "e1": "dev @0.5: macro-F1 29.63 | micro-F1 46.79 | subset acc 8.02 || dev macro-F1, thresholds tuned on other half: 37.49",
+   "e2": "dev @0.5: macro-F1 34.21 | micro-F1 48.68 | subset acc 9.27 || dev macro-F1, thresholds tuned on other half: 40.18",
+   "e3": "dev @0.5: macro-F1 36.58 | micro-F1 50.38 | subset acc 9.46 || dev macro-F1, thresholds tuned on other half: 40.34"
+  }
+ },
+ "phase6": {
+  "metric": "ROUGE-1/2/L, 100 dev cases (abstractive part alone)",
+  "lorma": {
+   "r1": 50.86997598703199,
+   "r2": 25.839877236318372,
+   "rl": 26.33772925270557
+  },
+  "lorma_words": 784.59,
+  "lorma_dev_loss": [
+   1.6176540410203397,
+   1.371046964711587
+  ],
+  "full": {
+   "r1": 51.97501668512925,
+   "r2": 26.983066290679325,
+   "rl": 27.285685334859135
+  },
+  "full_words": 751.23,
+  "full_dev_loss": [
+   1.6176540410203397,
+   1.3444414128739537
+  ]
+ },
+ "phase7": {
+  "args": {
+   "backbone": "/workspace/models/cs781_phase1_runs/ROPEFIX_295M",
+   "repo": "/home/mani/cs781_phase1/Legal_LLM",
+   "out": "../runs/lorma_saved",
+   "max_tokens": 512,
+   "pairs": 8,
+   "epochs": 1,
+   "lr": 0.0005,
+   "temp": 0.05,
+   "rank": 16,
+   "alpha": 32,
+   "seed": 0,
+   "save": "/workspace/models/cs781_lorma/phase7_lorma_retriever_adapters.pt"
+  },
+  "frozen": {
+   "dense": {
+    "f1": 0.15786548082267926,
+    "p": 0.17191283292978207,
+    "r": 0.1459403905447071
+   },
+   "bm25": {
+    "f1": 0.41467481934408007,
+    "p": 0.4515738498789346,
+    "r": 0.38335046248715315
+   },
+   "fused": {
+    "f1": 0.27793218454697055,
+    "p": 0.3026634382566586,
+    "r": 0.2569373072970195
+   }
+  },
+  "trainable_params": 6688768,
+  "train_minutes": 3.0105768203735352,
+  "peak_train_gb": 20.571369647979736,
+  "lorma": {
+   "dense": {
+    "f1": 0.2556976097832129,
+    "p": 0.2784503631961259,
+    "r": 0.23638232271325796
+   },
+   "bm25": {
+    "f1": 0.41467481934408007,
+    "p": 0.4515738498789346,
+    "r": 0.38335046248715315
+   },
+   "fused": {
+    "f1": 0.3668704836020011,
+    "p": 0.39951573849878935,
+    "r": 0.3391572456320658
+   }
+  }
+ }
+}

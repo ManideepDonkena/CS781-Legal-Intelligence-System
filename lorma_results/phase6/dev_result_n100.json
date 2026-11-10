@@ -1,0 +1,21 @@
+{
+ "args": {
+  "cmd": "generate",
+  "ckpt": "/workspace/models/cs781_lorma/p6_ffn_r16/e1.pt",
+  "split": "dev",
+  "out": "../runs/lorma/ffn_r16",
+  "tag": "_n100",
+  "limit": 100,
+  "batch": 16,
+  "min_frac": 0.7,
+  "max_frac": 1.8,
+  "no_repeat": 4,
+  "rep_penalty": 1.0
+ },
+ "dev": {
+  "r1": 50.86997598703199,
+  "r2": 25.839877236318372,
+  "rl": 26.33772925270557
+ },
+ "mean_words": 784.59
+}

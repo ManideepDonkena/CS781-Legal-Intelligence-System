@@ -1,0 +1,45 @@
+{
+ "args": {
+  "backbone": "/workspace/models/cs781_phase1_runs/ROPEFIX_295M",
+  "repo": "/home/mani/cs781_phase1/Legal_LLM",
+  "out": "../runs/lorma/top8_k0",
+  "fold": 0,
+  "k": 5,
+  "split_seed": 0,
+  "context": 256,
+  "max_sent": 256,
+  "epochs": 2,
+  "lr": 0.0005,
+  "head_lr": 0.001,
+  "batch_tokens": 8192,
+  "cw": 0.5,
+  "seed": 0,
+  "token_layers": "",
+  "lorma_rank": 16,
+  "lorma_alpha": 32.0,
+  "lorma_top": 8,
+  "no_extract": true
+ },
+ "scores": {
+  "all13": 0.4690573647032145,
+  "present": 0.5081454784284823,
+  "acc": 0.5664948453608247,
+  "per_label": {
+   "Fact": 0.713,
+   "Issue": 0.679,
+   "ArgumentPetitioner": 0.558,
+   "ArgumentRespondent": 0.291,
+   "Statute": 0.659,
+   "Dissent": 0.0,
+   "PrecedentReliedUpon": 0.538,
+   "PrecedentNotReliedUpon": 0.254,
+   "PrecedentOverruled": 0.0,
+   "RulingByLowerCourt": 0.631,
+   "RatioOfTheDecision": 0.572,
+   "RulingByPresentCourt": 0.684,
+   "None": 0.519
+  }
+ },
+ "minutes": 1.9864225228627523,
+ "peak_gb": 6.31258487701416
+}

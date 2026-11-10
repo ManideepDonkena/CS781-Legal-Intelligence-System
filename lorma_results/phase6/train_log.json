@@ -1,0 +1,24 @@
+{
+ "args": {
+  "cmd": "train",
+  "out": "/workspace/models/cs781_lorma/p6_ffn_r16",
+  "backbone": "/workspace/models/cs781_phase1_runs/ROPEFIX_295M",
+  "all": false,
+  "context": 4096,
+  "in_tokens": 2560,
+  "out_tokens": 1500,
+  "epochs": 1,
+  "lr": 0.0005,
+  "warmup": 100,
+  "batch_tokens": 16384,
+  "n_dev_loss": 200,
+  "seed": 0,
+  "lorma_rank": 16,
+  "lorma_alpha": 32.0,
+  "lorma_ffn_only": true
+ },
+ "dev_loss": [
+  1.6176540410203397,
+  1.371046964711587
+ ]
+}

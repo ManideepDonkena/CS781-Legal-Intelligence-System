@@ -1,0 +1,54 @@
+{
+ "id": "FINAL_295M",
+ "title": "FINAL_295M",
+ "question": "FINAL",
+ "hypothesis": "",
+ "protocol": {
+  "study": "FINAL",
+  "cache": "final_bpe32k_mixA_3B"
+ },
+ "settings": {
+  "sources": [
+   "acts",
+   "high_courts",
+   "supreme_court",
+   "tribunals"
+  ],
+  "seed": 42,
+  "validation_fraction": 0.05,
+  "max_document_bytes": 16000000,
+  "max_invalid_fraction": 0.05,
+  "tokenizer": "bpe",
+  "vocab_size": 32000,
+  "tokenizer_sample_bytes": 60000000,
+  "train_tokens": 3000000000,
+  "val_tokens": 4000000,
+  "validation_pairs": 20,
+  "max_documents_per_source": 0,
+  "max_source_text_bytes": 0,
+  "family": "yarn_gqa",
+  "d_model": 1024,
+  "layers": 23,
+  "heads": 16,
+  "context": 2048,
+  "dropout": 0.0,
+  "gradient_checkpointing": false,
+  "batch_size": 8,
+  "grad_accum": 4,
+  "learning_rate": 0.002,
+  "weight_decay": 0.1,
+  "warmup_steps": 915,
+  "eval_every": 1525,
+  "max_steps": 45776,
+  "shared_groups": 2,
+  "local_window": 256,
+  "model_extra": {
+   "n_kv_heads": 4,
+   "tie_embeddings": true
+  },
+  "decay_split": true,
+  "compile": true,
+  "min_lr_ratio": 0.1,
+  "require_competition_size": true
+ }
+}
